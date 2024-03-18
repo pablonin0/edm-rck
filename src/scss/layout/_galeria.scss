@@ -1,0 +1,56 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+.galeria{
+    padding: 5rem 0;
+    h3{
+        text-align: center;
+    }
+}
+
+.galeria-imagenes{
+    @include m.listReset;
+    @include m.grid(2,2rem);
+    @include m.telefono{
+        @include m.grid(3,2rem); 
+    }
+    @include m.tablet{
+        @include m.grid(4,2rem); 
+    }
+    @include m.desk{
+        @include m.grid(6,2rem); 
+    }
+}
+
+.overlay{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    place-items:center;
+    z-index: 20;
+
+    background-color: rgb(0 0 0 / .7);
+
+
+    picture{
+        display: block;
+        max-width: 80rem;
+    }
+}
+
+.btn-close{
+
+    height: 5rem;
+    width: 5rem;
+    color: v.$negro;
+    background-color: v.$blanco;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}

@@ -1,0 +1,6 @@
+@mixin heading($color: balck){
+    font-size: 2.4rem;
+    color: $color;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

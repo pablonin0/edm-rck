@@ -1,0 +1,51 @@
+// @mixin heading($color: balck){
+//     font-size: 2.4rem;
+//     color: $color;
+//     letter-spacing: 1px;
+//     text-transform: uppercase;
+// }
+@use 'variables' as v;
+
+@mixin grid($columns,$gap:2rem){
+    display: grid;
+    grid-template-columns:repeat($columns, 1fr);
+    gap: $gap;
+    
+}
+
+
+@mixin telefono{
+    @media(min-width:v.$telefono){
+        @content;
+    }
+}
+@mixin tablet{
+    @media(min-width:v.$tablet){
+        @content;
+    }
+}
+@mixin desk{
+    @media(min-width:v.$desk){
+        @content;
+    }
+}
+@mixin deskXL{
+    @media(min-width:v.$deskXL){
+        @content;
+    }
+}
+@mixin listReset{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+// @mixin grid($columnas, $gapspace){
+//     display: grid;
+//     grid-template-columns:repeat($columnas, 1fr);
+//     gap:$gapspace;
+
+// }
+
